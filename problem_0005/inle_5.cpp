@@ -20,10 +20,9 @@ int smallest_divisible(int max){
         if (checkprime(i))
         {
             int power = 1;
-            while (power <= max)
+            while (power * i <= max)
             {
                 power *= i;
-                std::cout << power;
             }  
             product *= power;
         } 
@@ -32,5 +31,5 @@ int smallest_divisible(int max){
 }
 
 int main(){
-    std::cout << smallest_divisible(20);
+    std::cout << smallest_divisible(20) << "\n";
 }
