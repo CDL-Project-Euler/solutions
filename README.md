@@ -59,6 +59,7 @@ Once inside the solutions folder, you can do a numbere of things:
 After making changes to the files, you can run the following commands to upload them back onto Github:
 
 ```
+git pull origin master
 git add .
 git commit -m "commit message, e.g. Solution for some_problem, yay for me!"
 git push origin master
