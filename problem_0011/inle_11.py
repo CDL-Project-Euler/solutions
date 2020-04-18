@@ -8,7 +8,6 @@ def prod_vert_lines(grid: list, line_size: int):
     height = len(grid)
     width = len(grid[1])
     max_sum = 1
-    count = 0
     for indexy in range(height - line_size + 1):
         for indexx in range(width):
             current = 1
