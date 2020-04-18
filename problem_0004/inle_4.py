@@ -3,8 +3,8 @@
 import math
 def problem4():
     palindrome = 0
-    for x in reversed(range(100,999)):
-        for y in reversed(range(100,999)):
+    for x in range(100,999):
+        for y in range(100,999):
             if ispalindrome(x * y) and palindrome < x*y:
                 palindrome = x*y
     return(palindrome)
