@@ -20,7 +20,7 @@ int length_collatz(int number)
 }
 
 
-int longest_collatz(int max) 
+int longest_collatz(int64_t max) 
 {
     int length;
     int longest;
