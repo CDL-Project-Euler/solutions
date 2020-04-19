@@ -9,7 +9,7 @@
 #include <vector>
 #include <math.h>
 
-int sum_factors(int var){
+int sum_proper_divisors(int var){
     //Determines sum of var's number of factors NOTE: Does not include number, but includes 1
     int count = 1;
     double sqrt = pow(var, 0.5);
@@ -30,7 +30,7 @@ int amicable_sum(int top){
 
     for (int i = 0; i <= top; i++)
     {
-        numbers.push_back(sum_factors(i));
+        numbers.push_back(sum_proper_divisors(i));
     }
     for (int i = 0; i < top; i++)
     {
