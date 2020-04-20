@@ -18,10 +18,5 @@ def longest_collatz(max):
             longest = start
     return longest
 
-def optimized_collatz(max):
-    bool_array = np.full(max, 0, dtype = int)
-
-
-
 if __name__ == "__main__":
     print(longest_collatz(1000000))

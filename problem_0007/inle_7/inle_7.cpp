@@ -16,7 +16,7 @@ bool checkprime(int value){
 int nthprime(int n){
     int count = 0;
     int num = 1;
-    while (count < 10001)
+    while (count < n)
     {
         num ++;
         if (checkprime(num))
