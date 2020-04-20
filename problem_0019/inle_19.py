@@ -8,7 +8,7 @@ def sundays_count():
     count = 0
 
     while(year <= 2000):
-        if day == 0:
+        if day == 4:
             count += 1
 
         if month == 1 and year % 4 == 0 and (year % 100 != 0 or year % 400 == 0):
