@@ -8,7 +8,7 @@
 
 
 
-def count_permutations(n: int, r : int):
+def permutations(n: int, r : int):
     """Gives the number of possibilities of n objects chosen r times, order matters"""
     product = 1
     for i in range(n - r + 1, n + 1):
@@ -21,7 +21,7 @@ def nth_perm(n: int, digits =  "0123456789"):
     length = len(digits)
     n = n-1
     for perm_digit in range(1, length + 1):
-        perm = count_permutations(length - perm_digit, length - perm_digit)
+        perm = permutations(length - perm_digit, length - perm_digit)
         nth_perm = nth_perm + digits[n//perm]
         digits = digits[:n//perm] + digits[n//perm+1:]
         n -= perm * (n//perm)

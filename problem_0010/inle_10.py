@@ -14,7 +14,6 @@ def sum_primes_under(n: int):
     while num < n:
         if checkprime(num):
             sum += num
-            print(sum)
         num += 1
     return(sum)
 
