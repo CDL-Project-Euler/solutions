@@ -1,5 +1,5 @@
 # Solutions
-Solution code for Project Euler, as completed by Collège du Léman students.
+Solution codes for Project Euler problems less than 100, as completed for educational purposes by Collège du Léman students.
 
 ## How to upload your solutions
 To be able to use Github, you will need the [`Git`](https://git-scm.com/) installed on your device. Depending on your operating system, there may be different ways of accomplishing this task.
