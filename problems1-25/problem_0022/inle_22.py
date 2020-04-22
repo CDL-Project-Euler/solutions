@@ -1,4 +1,4 @@
-def get_array(file_name: str):
+def get_list(file_name: str):
     with open(file_name) as f:
         array = [x for x in f.read()[1:-1].split('","')]
     return(array)
@@ -11,5 +11,5 @@ def index_x_letter_sum(name_list: list):
     return total
 
 if __name__ == "__main__":
-    print(index_x_letter_sum(get_array("p022_names.txt")))
+    print(index_x_letter_sum(get_list("p022_names.txt")))
 
