@@ -7,7 +7,7 @@ def coin_sums(total: int):
                 for twentyp in range((total-200*two_pound - 100*one_pound - 50 * fiftyp) // 20 + 1):
                    for tenp in range((total-200*two_pound - 100*one_pound - 50 * fiftyp - 20*twentyp) // 10 + 1):
                        for fivep in range((total-200*two_pound - 100*one_pound - 50*fiftyp - 20*twentyp - 10*tenp) // 5 + 1):
-                           for twop in range((total-200*two_pound - 100*one_pound - 50*fiftyp - 20*twentyp - 10*tenp - 5*fivep) // 2 + 1):
+                           for _ in range((total-200*two_pound - 100*one_pound - 50*fiftyp - 20*twentyp - 10*tenp - 5*fivep) // 2 + 1):
                                count += 1
     return count
 

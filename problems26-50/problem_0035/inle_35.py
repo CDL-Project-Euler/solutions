@@ -10,12 +10,12 @@ def checkprime(value: int):
         factor += 1
     return True
 
-def list_to_decimal(list_number: list):
+def list_to_decimal(list_number: list , base = 10):
     #Converts a list to decimal
     number = 0
     length = len(list_number)
     for index in range(length):
-        number += 10**(length-1-index) * int(list_number[index])
+        number += base**(length-1-index) * int(list_number[index])
     return number
 
 def circulations(string):

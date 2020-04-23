@@ -2,10 +2,9 @@
 #include <vector>
 #include <cmath>
 
-int count_proper_divisors(int var){
-    //Determines sum of var's number of factors NOTE: Does not include number, but includes 1
+int count_prime_factors(int var){
+    //Determines count of var's number of factors NOTE: includes number, but includes 1
     int count = 1;
-    double sqrt = pow(var, 0.5);
 
     for (int factor = 2; var != 1; factor++)
     {
