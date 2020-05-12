@@ -5,7 +5,7 @@ def sqrt_period(x:int):
     d = 1
     period = 0
     while True:
-        if d == x-a**2:
+        if d == x-a**2: # if the denomenator of the new fraction is 1, 1 period has finished
                     return period+1
         d = (x-a**2)/d
         a = d*((x**0.5+a)//d)-a
