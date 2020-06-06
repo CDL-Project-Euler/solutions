@@ -13,9 +13,10 @@ def max_exp(arr: list):
             if pair2[0] > pair[0] and pair2[1] > pair[1]:
                 new_arr.remove(pair)
                 break
-    return new_arr
+    return max([x[0]**x[1] for x in arr])
 
 if __name__ == "__main__":
     exponents = get_array('p099_base_exp.txt')
+    print(max([x[0]**x[1] for x in exponents]))
     print("length is: ", len(exponents))
     print(len(max_exp(exponents)))
