@@ -61,7 +61,6 @@ def max_continuous(l:list):
             count = 1
     return max_count
 
-
 def max_digit_arith():
     top = 0
     for digs in it.combinations(range(1, 10), 4):
@@ -71,5 +70,6 @@ def max_digit_arith():
             top = count
             print(digs, count)
     return max_set
+    
 if __name__ == "__main__":
     print(max_digit_arith())
