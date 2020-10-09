@@ -67,5 +67,18 @@ git push origin master
 
 You may be asked to enter your username/email and password for Github, in such a case, do so.
 
-Good luck!
+## Solutions formatting
+The solutions uploaded to this repository are divided into four folders that each have folders for
+the appropriate solutions. If this folder does not exist, you may create it following the `pXXX`
+naming scheme. The following rules within a single `pXXX` solutions folder apply:
+
+1. Your name / username used must be consistent across all solutions pushed to this repository
+
+2. If your solution is contained within a single file, this file should have your name / username
+and the extension.
+
+3. If your solution requires more than a single file, it must be contained within an additional
+folder also bearing your name / username, and no extension. Within it, you are free to name as you like.
+
+4. Don't upload binaries and compiled versions of your solutions.
 
