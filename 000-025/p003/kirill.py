@@ -18,8 +18,5 @@ def composite_check(x):
 while num < limit:
     if limit % num == 0 and composite_check(num) == False:
         prime_factor = num
-    num += 1
-    print(num)
-
-print(prime_factor)
-
+        num += 1
+        print(num)
