@@ -12,7 +12,7 @@ def primes_sieve2(limit): #found on stack overflow ;)
 
 def checkprime(value: int):
     factor = 2
-    sqrt = value ** 0.5                         #
+    sqrt = value ** 0.5
     while factor <= sqrt:
         if value % factor == 0:
             return False
@@ -31,7 +31,7 @@ def concat_prime_pair(num_primes, max_search: int):
         return primes
     # if num_primes > 1:
     list_prime_concats = []
-    for prime_set in concat_prime_pair(num_primes - 1, 5000):
+    for prime_set in concat_prime_pair(num_primes - 1, 10000):
         for index in range(len(primes)):
             if primes[index][0] > prime_set[-1] and first_is_concatprime(prime_set + [primes[index][0]]):
                 list_prime_concats.append(prime_set + [primes[index][0]])

@@ -1,5 +1,4 @@
 #include <iostream>
-#include <cmath>
 
 int main(){
     float min_dist_n = 3;
