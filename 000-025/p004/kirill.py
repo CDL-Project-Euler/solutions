@@ -1,7 +1,3 @@
-factor1 = 99
-factor2 = 100
-old_palindrom = 0
-
 def palindrom_check(num):
     raw_list = list(str(num))
     num_list = list(map(int, raw_list))
@@ -27,8 +23,11 @@ def palindrom_check(num):
             return True
         else:
             return False
-    return output 
+    return output
 
+factor1 = 99
+factor2 = 100
+old_palindrom = 0
 while factor1 != 1000:
     factor1 += 1
     factor2 = 100
