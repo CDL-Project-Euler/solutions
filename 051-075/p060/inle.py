@@ -1,6 +1,6 @@
 from itertools import combinations, permutations
 
-def primes_sieve2(limit): #found on stack overflow ;)
+def primes_sieve2(limit):
     a = [True] * limit                          # Initialize the primality list
     a[0] = a[1] = False                         #0 and 1 are false
 
