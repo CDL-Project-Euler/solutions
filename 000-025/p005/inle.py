@@ -21,5 +21,5 @@ def fast_lcm(factors: list, lcm = 1) -> int:
                     lcm * factors[0]
                     )
 
-print(slow_lcm(10))
-print(fast_lcm(list(range(1,20))))
+#print(slow_lcm(10))
+print(fast_lcm(list(range(1,100))))
