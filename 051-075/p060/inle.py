@@ -26,15 +26,15 @@ def first_is_concatprime(prime_set):
     return True
 
 def concat_prime_pair(num_primes, max_search: int):
-    primes = [[prime] for prime in primes_sieve2(max_search)]
+    primes = [prime for prime in primes_sieve2(max_search)]
     if num_primes == 1:
         return primes
     # if num_primes > 1:
     list_prime_concats = []
     for prime_set in concat_prime_pair(num_primes - 1, 10000):
         for index in range(len(primes)):
-            if primes[index][0] > prime_set[-1] and first_is_concatprime(prime_set + [primes[index][0]]):
-                list_prime_concats.append(prime_set + [primes[index][0]])
+            if primes[index] > prime_set[-1] and first_is_concatprime(prime_set + [primes[index]]):
+                list_prime_concats.append(prime_set + [primes[index]])
     print(num_primes)
     return list_prime_concats
 
