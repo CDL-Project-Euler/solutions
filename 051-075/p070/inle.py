@@ -1,3 +1,5 @@
+# Don't know why it doesn't work
+
 def totient(n: int, primes_n: list) -> float:
     tot = n
     for prime in primes_n:

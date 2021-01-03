@@ -1,7 +1,7 @@
 import math
 
 def euclidean_gcf(m: int, n: int) -> int:
-    '''extended euclidean algorithm to find gcd, m > n'''
+    '''extended euclidean algorithm to find gcf, m > n'''
     while (remainder := m % n) != 0:
         m, n, remainder = n, remainder, n % remainder
     return n
