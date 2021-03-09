@@ -1,4 +1,5 @@
 def solve(to_exceed: int):
+    """Solve project euler problem 86."""
     solutions = 0
     z = 0
     while solutions <= to_exceed:
