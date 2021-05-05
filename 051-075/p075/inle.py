@@ -1,22 +1,31 @@
-from math import floor
-
-def euclidean_gcf(m: int, n: int) -> int:
-    '''extended euclidean algorithm to find gcf, m > n'''
-    while (remainder := m % n) != 0:
-        m, n, remainder = n, remainder, n % remainder
-    return n
+def gcf(m: int, n: int) -> int:
+    """Find gcf of m and n."""
+    while n:
+        m, n = n, m % n
+    return m
 
 
-def problem_75(limit: int) -> int:
-
-    arr = [0] * (limit + 1)
-    for m in range(3, limit):
-        for n in range(2, m):
+def solve(limit: int) -> int:
+    """Solves project euler problem 75 with triangles up to limit."""
+    multi_perims = set()
+    single_perims = set()
+    print((limit ** 0.5) // 2)
+    for m in range(2, 1 + int((limit / 2) ** 0.5)):
+        for n in range(1, m):
             if (perimeter := 2 * m * m + 2 * m * n) > limit:
                 break
-            if euclidean_gcf(m, n) == 1:
-                for k in range(1, floor(limit / perimeter) + 1):
-                    arr[k * perimeter] += 1
-    return arr
+            if gcf(m, n) == 1 and m % 2 + n % 2 != 2:
+                print(m * m - n * n, 2 * m * n, m * m + n * n, perimeter)
+                for perim_mult in range(perimeter, limit + 1, perimeter):
+                    if perim_mult not in multi_perims:
+                        if perim_mult in single_perims:
+                            single_perims.remove(perim_mult)
+                            multi_perims.add(perim_mult)
+                        else:
+                            single_perims.add(perim_mult)
+    print(single_perims)
+    print(len(single_perims))
 
-print(problem_75(48))
+
+if __name__ == "__main__":
+    solve(1500000)

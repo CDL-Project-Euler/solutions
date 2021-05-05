@@ -1,6 +1,6 @@
 from itertools import combinations, permutations
 
-def primes_sieve2(limit):
+def primes_sieve2(limit: int):
     a = [True] * limit                          # Initialize the primality list
     a[0] = a[1] = False                         # 0 and 1 are false
 
@@ -21,7 +21,7 @@ def checkprime(value: int):
     return True
 
 
-def first_is_concatprime(prime_set):
+def first_is_concatprime(prime_set: list):
     for x in prime_set[:-1]:
         if not(checkprime(int(str(x)+str(prime_set[-1]))) and checkprime(int(str(prime_set[-1])+str(x)))):
             return False
@@ -43,10 +43,18 @@ def concat_prime_pair(num_primes, max_search: int):
 def min_list_sum(list_of_lists):
     return min(map(sum, list_of_lists))
 
+def find_max(size: int):
+    prime_set = list()
+    while len(sets) < size:
+        prime_set.append()
+        if not first_is_concatprime(prime_set):
+
+
+
 if __name__ == "__main__":
     num_primes = 4
-
-    print(concat_prime_pair(num_primes, 5000))
+    print(find_max)
+    # print(concat_prime_pair(num_primes, 5000))
 # 4 solved
 # 5000 is top searched for 5
     

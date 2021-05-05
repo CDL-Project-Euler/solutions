@@ -1,25 +1,25 @@
-'''
-    Need to optimize the algorithm which counts all unique integer sums up to n, p(n)
-    Could optimize space efficiency too...
-'''
-def p(limit: int, divisor: int) -> int:
-    ways = [[0] * (i + 1) for i in range(limit)]
-    for i in range(len(ways)):
-        ways[i][-1] = 1
-        if (pn := sum(ways[i])) % divisor == 0:
-            return i + 1
-        print(pn)
-
-        try:
-            ways[i + 1][0] += pn
-        except:
-            pass
-
-        for k in range(1, i + 1):
-            try:
-                ways[i + k + 1][k] += sum(ways[i][k:])
-            except:
+class Solution:
+    def __init__(self, search_range: int, divisor: int):
+        self.search_range = search_range
+        self.counts = [[0] * search_range for _ in range(search_range)]
+        self.divisor = divisor
+        for i in range(search_range):
+            if (answer := self.p(i, i)) == 0:
+                print(i, ":", answer)
                 break
-    return "not found"
+            # print(i, ":", answer)
 
-print(p(10000, 100000)) # 'not found' 
+    def p(self, maximum: int, n: int):
+        """Count ways to split n items with groups of max size, maximum."""
+        if n == 0:
+            return 1
+        if self.counts[maximum-1][n-1]:
+            return self.counts[maximum-1][n-1]
+        solution = 0
+        for i in range(1, min(n + 1, maximum + 1)):
+            solution = (solution + self.p(i, n - i)) % self.divisor
+        self.counts[maximum-1][n-1] = solution
+        return solution
+
+
+Solution(10000, 10000)  # 100000 greater than 2000 need faster method --> check out euler video
