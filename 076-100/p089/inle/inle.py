@@ -59,7 +59,7 @@ if __name__ == "__main__":
     print("orig | new | num")
     for roman in romans:
         num = read_roman(roman)
-        new_roman = minimal_roman(num)
+        new_roman = minimal_roman(num)w
         total += len(roman) - len(new_roman)
         print(roman, new_roman, num)
     print("Total saved:", total)
